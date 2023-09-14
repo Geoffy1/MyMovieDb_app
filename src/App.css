@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700&display=swap");
+
+/* Global Styles */
+body {
+  /* Set the default font family to Source Sans Pro and sans-serif as a fallback */
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  /* Set a background image and styles */
+  background-image: url("popeye.jpeg");
+  background-size: cover; /* Ensure the background image covers the entire viewport */
+  background-repeat: no-repeat; /* Prevent background image repetition */
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Container Styles */
+.container {
+  width: 90%; /* Set the container width to occupy 90% of its parent */
+  max-width: 1200px; /* Set a maximum width for the container */
+  margin: 2em auto; /* Center the container and add spacing from the top */
+  background-color: rgba(155, 89, 182, 0.7); /* Add a semi-transparent background color */
+  border-radius: 10px; /* Add rounded corners to the container */
+  padding: 1em; /* Add padding inside the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the container */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Grid Styles */
+.grid {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(3, 1fr); /* Create a grid with 3 equal columns */
+  grid-gap: 20px; /* Add spacing between grid items */
+  justify-content: center; /* Center the grid horizontally */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Heading Styles */
+h2 {
+  background-color: rgba(255, 215, 0, 0.7); /* Add a yellow background with transparency */
+  color: #333; /* Set the text color */
+  padding: 10px; /* Add padding around the heading */
+  border-radius: 5px; /* Add rounded corners to the heading */
+  text-align: center; /* Center the text */
+  margin: 0; /* Remove default margin */
 }
 
-.App-link {
-  color: #61dafb;
+/* Form Styles */
+Form {
+  margin-top: 20px; /* Add space above the form */
+  text-align: center; /* Center the form elements */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Input Styles */
+FormControl[type="search"] {
+  border: none; /* Remove the border */
+  border-radius: 25px; /* Add rounded corners to the input */
+  padding: 10px 20px; /* Add padding to the input */
+  font-size: 16px; /* Increase the font size */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the input */
+}
+
+/* Button Styles */
+Button[type="submit"] {
+  background-color: #007bff; /* Set the button background color */
+  color: #fff; /* Set the text color */
+  border: none; /* Remove the border */
+  border-radius: 25px; /* Add rounded corners to the button */
+  padding: 10px 20px; /* Add padding to the button */
+  font-size: 16px; /* Increase the font size */
+  cursor: pointer; /* Add a pointer cursor to the button */
+  transition: background-color 0.3s; /* Add a smooth background color transition */
+}
+
+/* Button Hover Effect */
+Button[type="submit"]:hover {
+  background-color: #0056b3; /* Change the button color on hover */
 }
