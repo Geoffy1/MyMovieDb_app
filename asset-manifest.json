@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/MyMovieDb_app/static/css/main.548ad928.css",
+    "main.js": "/MyMovieDb_app/static/js/main.bb7ab312.js",
+    "static/media/popeye.jpeg": "/MyMovieDb_app/static/media/popeye.0401fe822af716c308b0.jpeg",
+    "index.html": "/MyMovieDb_app/index.html",
+    "main.548ad928.css.map": "/MyMovieDb_app/static/css/main.548ad928.css.map",
+    "main.bb7ab312.js.map": "/MyMovieDb_app/static/js/main.bb7ab312.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.548ad928.css",
+    "static/js/main.bb7ab312.js"
+  ]
+}
