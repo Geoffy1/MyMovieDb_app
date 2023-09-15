@@ -2,7 +2,7 @@ import { Modal, Button } from 'react-bootstrap';
 import React, { useState } from 'react';
 
 // Define the base URL for movie poster images
-const API_IMG = "https://api.themoviedb.org/3/movie/{movie_id}/images";
+const API_IMG = "https://image.tmdb.org/t/p/w500";
 
 // MovieBox component to display movie information
 const MovieBox = ({ poster_path, runtime, vote_average, overview, titel, release_date }) => {
