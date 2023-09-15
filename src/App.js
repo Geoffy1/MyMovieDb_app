@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Navbar, Nav, FormControl, Form, Button } from 'react-bootstrap';
 
 // Define the API URLs
-const API_URL = "https://api.themoviedb.org/3/movie/popular?api_key=6a8aba6c223aa4c5c79fbc541531685e";
+const API_URL = "https://api.themoviedb.org/3/movie/top_rated?api_key=6a8aba6c223aa4c5c79fbc541531685e";
 const API_SEARCH = "https://api.themoviedb.org/3/search/movie?api_key=6a8aba6c223aa4c5c79fbc541531685e&query";
 
 // Create the main App component
