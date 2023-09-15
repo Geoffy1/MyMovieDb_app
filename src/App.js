@@ -1,15 +1,14 @@
-// Import React and necessary components/modules
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import MovieBox from './MovieBox';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Navbar, Nav, FormControl, Form, Button } from 'react-bootstrap';
 
-// Define the API URLs
-const API_URL = "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1/api_key=6a8aba6c223aa4c5c79fbc541531685e";
-const API_SEARCH = "https://api.themoviedb.org/3/search/movie?api_key=6a8aba6c223aa4c5c79fbc541531685e&query";
+// Define the API URLs with your API key
+const API_KEY = "6a8aba6c223aa4c5c79fbc541531685e";
+const API_URL = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=${API_KEY}`;
+const API_SEARCH = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query`;
 
-// Create the main App component
 function App() {
   // State variables
   const [movies, setMovies] = useState([]);
@@ -22,8 +21,10 @@ function App() {
       .then((data) => {
         // Log the API response data
         console.log(data);
+        // Check if data.results is defined before slicing
+        const topMovies = data.results ? data.results.slice(0, 10) : [];
         // Set the top 10 movies to the state
-        setMovies(data.results.slice(0, 10));
+        setMovies(topMovies);
       });
   }, []);
 
@@ -33,7 +34,7 @@ function App() {
     console.log("Searching");
     try {
       // Build the search URL with the query
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=6a8aba6c223aa4c5c79fbc541531685e&query=${query}`;
+      const url = `${API_SEARCH}=${query}`;
       // Fetch data from the search API
       const response = await fetch(url);
       // Parse the response data
@@ -41,7 +42,7 @@ function App() {
       // Log the search results
       console.log(data);
       // Update the movies state with search results
-      setMovies(data.results);
+      setMovies(data.results || []); // Use an empty array if data.results is undefined
     } catch (error) {
       // Handle any errors
       console.log(error);
