@@ -1,13 +1,281 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.movie-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.movie-poster {
+  max-width: 270px;
+  height: auto;
+}
+
+.movie-title {
+  font-size: 23px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.movie-release-date {
+  font-size: 17px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.movie-runtime {
+  font-size: 16px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.movie-overview {
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.homepage-container {
+  display: fle;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  position: relative;
+  margin: -28px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+}
+
+.logo {
+  height: 50px;
+  margin-left: 6px;
+  margin-right: 0;
+  background: url(../public/tv.svg);
+  background-repeat: no-repeat;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.logo h2 {
+  margin-left: 60px;
+}
+
+.search-bar {
+  display: flex;
+  width: 400px;
+  align-items: center;
+  margin-left: 20px;
+  color: #fff;
+}
+
+.search-bar input[type="text"] {
+  padding: 8px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 300px;
+  background-color: transparent;
+  color: hsl(180, 13%, 95%);
+}
+
+.search-icon {
+  margin-left: -35px;
+}
+
+.search-bar input[type="text"]::placeholder {
+  color: #faf7f7;
+}
+
+
+.sign-in {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  cursor: pointer;
+  
+}
+
+.hero-content {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero-content button {
+  background: #BE123C;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 15px;
+  padding: 10px, 19px, 10px, 19px;
+  border-radius: 7px;
+  border-color: rgb(219, 131, 23);
+  
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.hero-content button:hover {
+  background-color: #f72056;
+}
+
+.left {
+  flex: 1;
+  padding: 20px;
+  float: left;
+  top: 8px;
+  gap: 16px;
+  max-width: 400px; 
+  padding: 6px, 16px, 6px, 16px;
+  border-radius: 6px;
+  gap: 8px;
+  margin-top: 100px;
+}
+h1 {
+  margin-top: 50px;
+}
+
+.search-results,
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 49px;
+  max-width: 100%;
+  margin-top: 34px;
+  justify-content: center;
+}
+
+.movie-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+/* movie card images */
+.movie-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* movie card titles */
+.movie-card h2 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/*movie card release dates */
+.movie-card p {
+  font-size: 14px;
+  color: #777;
+}
+
+.movie-card a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.heart-shape {
+  fill: #D1D5DB;
+  transition: fill 0.3s;
+}
+
+
+.red-color .heart-shape {
+  fill: red;
+}
+
+/* Styles the container for the image and HeartIc */
+.image-container {
+  position: relative;
+}
+
+/* Styles the HeartIc */
+.favorite-icon {
+  position: absolute;
+  top: 9px; /* Adjust the top position  */
+  right: 9px; /* Adjust the right position */
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.favorite {
+  transform: scale(1.2);
+  fill: red;
+}
+
+.footer {
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: rgba(224, 222, 222, 0.5);
+}
+
+.social-icons a {
+  color: #131212;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #55acee; /*  blue */
+}
+
+.social-icons i {
+  vertical-align: middle;
+}
+
+footer p {
+  color: #131212;
+}
+
+
+@media (max-width: 767px) {
+  .search-results,
+  .movie-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sign-in h2,
+  .logo h2 {
+    visibility: hidden;
+  }
+
+  .search-bar {
+    width: 40px;
+    margin-left: -200px;
+  }
 }
