@@ -9,7 +9,7 @@ function MovieSearch({
   handleSelectMovie,
 }) {
   return (
-    <div className="movies-search">
+    <div className="movies-search"  style={searchIconStyle}>
       <input
         type="text"
         placeholder="Search movie..."
