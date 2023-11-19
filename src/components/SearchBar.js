@@ -9,7 +9,7 @@ function MovieSearch({
   handleSelectMovie,
 }) {
   return (
-    <div className="movies-search"  style={searchIconStyle}>
+    <div className="hidden sm:flex cursor-pointer items-center flex-grow h-10 rounded-md bg-yellow-400 hover:bg-yellow-500">
       <input
         type="text"
         placeholder="Search movie..."
