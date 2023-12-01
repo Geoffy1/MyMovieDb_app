@@ -45,7 +45,7 @@ function MovieInfo() {
   return (
     <div className="movie-info-container">
       <div className="nabar">
-        <div className="logo"><h2>Movie Box</h2></div>
+        <div className="logo"><h2>Geof is the best!!</h2></div>
         <Link to="/">
           <i className="fas fa-home"></i> Home
         </Link>
