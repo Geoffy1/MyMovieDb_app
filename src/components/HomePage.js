@@ -109,7 +109,7 @@ function HomePage() {
       >
         {/* Navbar */}
         <div className="navbar">
-          <div className="logo"><h2>Movie Kudonjo</h2></div>
+          <div className="logo"><h2>RIGY Gachagua</h2></div>
           
           <div className="search-bar">
             <input
